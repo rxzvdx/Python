@@ -1,0 +1,79 @@
+Built In Numeric Types
+nt  - 1000   Float - 1000.0Complex  - These deal with imaginary numbers, and the prereqs 
+for this course do not require you to have knowledge of that concept, so we’re skipping these. Just know they exist
+
+Integer
+A whole numberOf the Numeric Types, it requires the least memory storage, making it the most efficient
+Change a data type to an int by: int(variable) 
+
+Float
+A number with a decimal point - 1000.0Or
+Scientific Notation - 1E3
+Change a data type to an float by: float(variable)
+
+Arithmetic
++ : addition
+-: subtraction
+*: multiplication
+/ & //:division & floor division
+%: modulus , this returns the remainder of a value 
+
+Division vs Floor Division
+For Integers, we know these as whole numbers, so what happens here?:
+var1 = 2
+var2 = 5
+print(var2/var1) ← What prints? What type is it?
+print(var2//var1) ← What prints? What type is it?
+
+Modulus
+ex. 5 % 2 returns 1 
+So you are read it like this: 5 -2 = 3, 3 -2 = 1, and we cannot go any further, return 1
+Let’s consider 6 % 2 : 6 - 2 = 4, 4 -2 = 2, 2 - 2 = 0, and we cannot go further, return 0
+
+Some Functions Available to Numeric Types
+For now, know a function as a piece of code, that manipulates a piece of data.
+abs(x) - Absolute value of x
+sqrt(x) - Square root of x, x must be > 0
+log(x) - Natural log of x, x must be > 0
+max(x1,x2,...) - of the input variables return the largest one
+min(x1,x2,...) - of the input variables return the largest one
+ceil(x) - returns the smallest int not less than x
+floor(x) - returns the largest int not greater than x
+
+Some Other Things of Importance
+We can do the following with numeric data:
+number = 1
+number += 1 ← What do you think this does?
+numberTwo = 4
+numberTwo -= 2 ← How about this?
+Can we do this?: number += numberTwo
+How about this?: number = number + numberTwo
+
+Some Functions Available to Numeric Types
+sin(x) - sin of x in radians
+cos(x)- cosine of x in radians
+tan(x)- tangent of x in radians
+degrees(x)- converts an angle x, from radians to degrees
+radians(x)- reverse of degrees The Mathematical constants pi and e are known and exist as well
+
+Boolean Data
+The True and False data type
+Something is true when it is not 0
+Ex. test = True <- Is a boolean variable, where the value equals True
+Data can be evaluated as True or False using: bool(variable)
+So if you did the above, bool(variable), when do you think something returns true, as opposed to false?
+
+When Data Is False
+Something is false when it is 0
+1.None - When you return a None type
+2.False - When the variable is initialized to False
+3.Zero of any numeric type
+4.Empty sequences. Ex. setting empty lists, tuples, or dictionaries
+5.Empty mapping. For example, {} 
+6.objects of Classes which has __bool__() or __len()__ method which returns 0 or False
+**5 and 6 you don’t have to know for now
+**All other values except these values are considered true.
+
+
+
+

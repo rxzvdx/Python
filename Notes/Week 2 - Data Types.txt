@@ -1,0 +1,66 @@
+What is a Data Type?
+The classification of data items. Data types represent a kind of value which determines what operations 
+can be done on the data. 
+
+Overview List of Data Types (Built in):
+●Integer
+●Float
+●String
+●List
+●Dictionary
+●Bool
+●Tuples
+
+Integer (int)
+A whole number
+Ex. 4
+So we could say: A = 4
+print(A) 
+Returns 4
+
+Float (float)
+Numeric with multiple decimal places.
+Ex. 5.0 , 5.00000000, 5.5
+Stands for floating point number
+
+String (str)
+A single character (many other languages call this a char), or a collection of characters
+Ex. a = ‘ok’, “ok”, or even ‘’’ok’’’
+print(a) returns the ok string
+
+List (list)
+An array or sequence of ordered data, it i mutable (able to be changed or muted), and the data can be of different
+types.
+Ex. myList = [‘a’,’b’,’c’] or [‘a’,’ok’,14] 
+Notice in the second example the first 2 spots are strings, while the 3rd is an int
+This is printed using index values:
+Ex. print(myList[0]) would return the string a
+"A" is the 0 element
+list [0;]
+
+Dictionary (dict)
+An array or sequence of data, it is immutable, and the data can be of different types. 
+Ex. [‘a’,’b’,’c’] or [‘a’,’ok’,14] 
+Notice in the second example the first 2 spots are strings, while the 3rd is an int
+
+heroes= {'peter';'spiderman'}
+           Key      value
+print(heroes['peter'])
+
+Tuples
+An ordered collection which is immutable 
+tupleFun = ("Wow", "Whoa", "ok")
+print(tupleFun[number or number range ex 0 or 0:1])
+
+Boolean (bool)
+These are effectively stating whether something is True or False
+Ex. a  = TRUE
+This is to say when we call variable a, it will evaluate to TRUE
+Ex. print(a) will return TRUE
+
+Operators (basic ones)
+Arithmetic Operators:  +,  -,  *,  /,  %,  etc.
+Comparison (Relational) Operators:  ==, !=, >> , <<, >= , <=  
+Assignment Operators:  = , +=, -=
+Logical Operators: and, or, not
+Identity Operators: is, is not

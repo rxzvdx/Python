@@ -1,0 +1,57 @@
+BRANCHING
+Branching boils down to decision making:If I have a value of x, do 1
+if(x == 1):x = x + 1So IF x equals 1, it will run the x = x+1 code
+"==" is comparitive, ot checks if te left equals the right
+
+Branching boils down to decision making:If I have a value of x, do 1
+Otherwise do 2
+Notice here we have 2 options, unlike the first where something only happens if the condition is met
+
+if(x == 1):x = x + 1 else: <- Notice the colon, without the : , this won’t work
+print(x) <- notice how it’s tabbed in after an if or else, without it, it won’t be apart of the statement
+●If either of those notes are missing, your code will fail/ or will be incorrect
+
+If I have a value of x, do 1
+Else if value of y, do 2
+Otherwise do 3
+Notice in this, we have 2 definitive possible options, followed by a catch all
+
+if(x == 1):
+	x = x + 1 
+elif(x == 2): 
+	x = x -1
+else: 
+	print(x) 
+
+After any and all if/else statements, you must have a : symbol
+This tells python hey, expect a set of code to execute following this condition
+Whatever code you want to be run if the condition is met, must be indented, and properly
+Standard proper indentation is being tabbed in onceIf you’re using Spyder, after you type the : just press enter, 
+and it’ll do the indentation for you
+
+Can be Nested
+If I have value x, do 1
+If value x is now y, do something
+
+If x equals value, add 1 to it
+If x now equals y, do something extra
+If x doesn’t equal value, do something else
+
+X = 1
+if(x == 1):
+	print(‘x at first equaled ’ + x)
+	x = x + 1
+	if(x == 2):
+		print(‘Nested x equals ’ + x) 
+else:
+	print(“Won’t happen currently”)
+
+Different Comparative Operations
+==
+!=
+>
+<
+>=
+<= 
+and 
+or

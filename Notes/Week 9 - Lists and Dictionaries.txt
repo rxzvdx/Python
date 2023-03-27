@@ -1,0 +1,107 @@
+Lists and Dictionaries
+
+myList = [] ← An empty list
+Properties of a list:
+Uses square brackets
+Can contain mixed data
+Can be referenced by index value (location with respect to the structure) 
+An ordered set of values (important)
+It’s mutable
+
+List Methods
+list.append(x)
+Add an item to the end of the list. Equivalent to a[len(a):] = [x]
+list.insert(i, x)
+Insert an item at a given position. The first argument is the index of the element before 
+which to insert, so a.insert(0, x) inserts at the front of the list, and a.insert(len(a), x) is equivalent 
+to a.append(x).
+list.remove(x)
+Remove the first item from the list whose value is equal to x. It raises a ValueError if there 
+is no such item.
+myL = [x, y, z]
+x is 0th element, y is 1st, and z is 2nd
+
+myL.insert(0, A)
+This says, in the 0th element, I want to insert A. This makes A the new 0th element.
+NOW: 
+myL = [A, X, Y, Z]
+
+Methods, Continued
+ist.pop([i])
+Remove the item at the given position in the list, and return it. If no index is specified, 
+a.pop() removes and returns the last item in the list. (The square brackets around the i in the 
+method signature denote that the parameter is optional, not that you should type square 
+brackets at that position. You will see this notation frequently in the Python Library Reference.)
+list.clear()
+Remove all items from the list. Equivalent to del a[:].
+list.index(x[, start[, end]])
+Return zero-based index in the list of the first item whose value is equal to x. Raises a 
+ValueError if there is no such item.
+
+Continued, again
+list.count(x)
+Return the number of times x appears in the list.
+list.sort(key=None, reverse=False)
+Sort the items of the list in place (the arguments can be used for sort customization, see 
+sorted() for their explanation). Sorts numerically, and alphabetically 
+list.reverse()
+Reverse the elements of the list in place.
+
+How to invoke the methods
+myList = [1,2,3]
+print(myList.reverse()) ← Prints the reverse elements of the list
+So it’s list.method(arguments if any are passed)
+
+Dictionaries
+myDictionary = {} ← An empty dictionary
+Properties of a dictionary:
+Uses curly braces
+An unordered set of values
+It’s an immutable set of keys to values. To clarify, the keys are immutable. 
+What’s a key value pair?
+
+Key Value Pair
+You have a key that corresponds to a value
+Key1 -> Value1
+Etc
+Ex. myDictionary = {‘Spider-Man’ : ‘Peter Parker’ , ‘Venom’ : ‘Eddie Brock’}
+In the above example, Spider-Man and Venom are keys, tied to the values Peter Parker, and 
+Eddie Brock, respectively.
+To call the value of Venom, we would do the following:
+myDictionary[‘Venom’] , This would return Eddie Brock
+
+Some Dictionary Techniques
+To change a value, simply do the following:
+Dictionary[key] = newValue
+Ex.
+ myDictionary[‘Spider-Man’] = ‘Miles Morales’
+Now if you print the Spider-Man key, it will return Miles Morales
+Think we can add a key?
+
+To add a key:
+Dictionary[new key] = newValue
+Ex.
+ myDictionary[‘Alignment’] = ‘Hero’
+Now our dictionary has a key of Alignment, and a value of Hero
+Can we remove elements? If so, how?
+
+Removing Elements
+ del dictionary[key] - deletes the value tied to the key
+ dictionary.clear() - clears all value entries within your dictionary, where dictionary is the name 
+of the dictionary you want to clear
+What do you think this does?: del dictionary 
+
+More Manipulation
+len(dictionary) - returns the number of elements in the dictionary
+str(dictionary) - returns  a printable version of the entire dictionary
+dict.items() - returns a list of (key, value) tuple pairs
+dictionary.keys() - returns a list of keys from the dictionary
+
+Two notes on Keys
+Keys must be unique, you cannot have keys in the same dictionary with the same name. If you 
+do, the newest one will override the previous.
+Keys are immutable. They can be strings, numbers, or tuples. You cannot have a dictionary of 
+keys where the keys are lists.
+
+for x in myL:
+print(x)

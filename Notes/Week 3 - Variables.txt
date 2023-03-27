@@ -1,0 +1,16 @@
+
+A variable is assigning a location to store a chosen value, that may be invoked to call on that value.
+Ex. number = 1 this is stating, I want to store a value of 1 in memory, and when I want to call this memory location, 
+I will type the word, number.
+That's why we can do print(number)
+
+firstName = 'Antonio'
+lastName = 'Rosado
+fullname = firstName+ ' ' +lastName
+
+userInput = input("What is your salary?")
+Assume a 26 week pay period, and 20% tax
+weekly = (userInput/26)
+monthly = (weekly * 4)
+
+

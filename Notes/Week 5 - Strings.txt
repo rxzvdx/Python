@@ -1,0 +1,76 @@
+What you’ve been told about Strings
+They are a datatypeThey’re a collection of characters found within quotes
+The quotes may be single, double or triple
+They can be compared
+You can convert another datatype to a String by invoking str()
+So, what else is there?
+
+Substrings
+A substring a a subset of characters found within a string
+For example:ello would be a substring of Hello
+H could be a substring of Hello as well
+So how do you think we get a substring?
+
+var1 = ‘Spider Man does whatever a spider can!’ 
+var1[0:10] This would print, Spider Man 
+var1[11:]  would print what? It will print, "does whatever a spider can!"
+var1[0] would print what? "s"
+
+*Each number in the brackets represents the character number*
+
+You can Modify a String Remember var1? ‘Spider Man does whatever a spider can!’
+We can do the following:
+Var3 = ‘Friendly neighbourhood ‘
+Var3 + var1[0:10] + var1[38]
+If print, this would say Friendly neighbourhood Spider Man!  ← Yes, I wanted the exclamation point.
+
+Escape Characters
+They’re characters you can put in a string to introduce formatting
+\n new line - Adds a line break
+\r carriage return - Drops to the next line, like \n
+\s space - Adds a space
+\t tab - Adds a tabEx. 
+print(“Spider”, “Man”, sep=’\s’) prints Spider Man ← Some believe the use of \s, \t , 
+etc are easier to read than leaving a physical blank.
+
+A method is a function that belongs to an object. 
+
+Object DefinedObject - A collection of data (variables) and methods (functions) that act on those data.
+A String is actually an Object
+When we declare a string, the system is creating a copy of the string object, and setting a variable equal to the value, 
+with datatype string.
+
+Objects have methods! (That’s a good way to tell if something is an object):
+str.capitalize() - Return a copy of the string with its first character capitalized and the rest lowercase
+str.isUpper() - Returns True if ALL chars in a string are uppercase
+str.isLower() - Returns True if ALL chars in a string are lowercase
+
+str.fin()
+type a str variable name
+x='N'
+x.find()
+
+Str.upper() - Returns the string in a uppercase form
+str.lower() - Returns the string in a lowercase form
+str.casefold() - Casefolded strings may be used for caseless matching
+
+str.find(‘A string’) - Looks for the A string part within the str variable. Returns the position
+EX: 
+x = 'nikkoli'
+X.find('k')
+Returns: "2" because there is two k's in the string
+However this does not print "2". 
+str(x.find('k')) <==== makes the "2" a string.
+
+EX 1 EXTENDED
+If you want to find the first instance of k you can do...
+var1=x.find('k')
+myL[var1:]
+print(myL[var1:20]) This would print a list of the first instance of k, and then the 20 characters after it. 
+
+Casefolding is similar to lowercase
+str.index(strX, beg = 0, end = length(str)) <- This searches str for a pattern of strX, and returns the numeric 
+position where strX was found
+
+
+

@@ -1,0 +1,129 @@
+LOOPS
+The repetition of a process. 
+In our case, it’s repeating a block of code nested within a loop 
+while true:
+	print(‘Hello”)
+In the above example, we are iterating over the while loop, executing the code nested within (the print statement)
+
+Classification of Loops
+Counter loops
+Conditional loops
+Collection loops
+
+~~Counter loop~~
+This is where a ‘counter’ is set, and dictates when the loop stops based on that counter 
+X = 0 
+While x <= 4: TRUE
+	Do stuff
+	X += 1 STILL TRUE
+
+*x+=1 is the same as (x=x+1)
+
+While (a<=4)
+	print ('Hello')
+	if(a==3)
+		print ('Halfway')
+	a+=1
+
+~~Conditional loop~~
+This is where a condition is set, and dictates when the loop stops.
+While true:
+	Do stuff
+
+a=false
+while (a==false)
+	print('hello')
+	if(a==3)
+		print('Halfway')
+	a+=1
+*Note that while a is 'false', it is still a TRUE statement so the code will run. 
+
+~~Collection loop~~
+This is when we iterate over an object/collection.
+This includes strings,lists, and dictionaries
+While a
+
+There are TWO types of loops
+While Loops and For Loops
+
+~~While Loop~~
+A loop that will run ‘while’ a condition is met (or is true)
+Ex. 
+answer = ‘yes’
+While answer == ‘yes’:
+	Do stuff
+What are some truths to be said about this type of loop?
+They are considered indefinite
+They can potentially run forever, but why?
+They also could never run^--- Can someone explain this?
+*This would be the case if a condition is not met*
+
+If you have a single line statement within your while loop, you can do the following:
+While (true): print (‘Should I teach you this? Idk...’)
+^-- a single line statement
+
+~~For Loops~~
+When should we use a for loop?
+●When we know how many times we want to loop over something
+●To iterate over an object, like a list or string
+●When we want to loop, at least once***
+
+~~For Loops and Range Functions~~
+The range function is like it sounds, it returns a range from 0 to N-1 ← Do we all know N-1?
+Ex. range (5) is actually 0,1,2,3,4  ← So this is an iterated integer that is saying, “Ok, I will iterate 5 TIMES, starting from 0.”
+You can return the range of a list by doing the following:
+list(range(5)) ← This is how you’d set an auto incrementing counter, and  iterate 5 times:
+For x in list(range(5)):
+	print(x) ← what’s printing?
+	0,1,2,3,4 will print because x is the item, and list(range(5)) is the collection.
+
+~~For Loop and Using Length~~
+Suppose we want to iterate over an object by index, how might we do that?
+borgCode = [‘You’, ‘Will’, ’Be’, ‘Assimilated’]
+For word in range(length(borgCode)):
+	Print (word)
+
+~~More on the Range Function~~
+Range can be passed up to 3 args, but 1 is the minimum, so you could say there are 2 optional arguments
+range(end) <- end at this point 
+range(start,end) <- start at this point, and then end here
+range(start, end, step) <- Same as above, but indicate the step size^-- explain these to me
+Can I use negative numbers?
+
+Yup.
+range(0,-4,-2) ← Totally legal, what’s happening?
+Can a get a range in reverse?
+Yep, using: reversed()
+reversed(range(5)) ← What should I get?
+4 3 2 1 0 
+
+REMEMBER 
+oth loop types can have an else statement!:
+hardestThemeEver = [‘na’,‘na’,‘na’,‘na’,‘na’,‘na’,‘na’]
+For i  in hardestThemeEver: print (‘Na’)
+Else:
+	print(‘Batman!’)
+It's going to run the 'na' until the condition is no longer met and then print 'batman'.
+
+~~Nested Loops~~
+Some of you know, you can place a loop, within another loop. 
+This is called ‘Nesting Loops’, the structure is the same as ‘Nested Ifs’. 
+The logic works like this, ‘do the outer loop logic once, then complete all iterations of the inner loop.
+When that has finished, trigger the outer loop again, followed by the inner loop’. ← This continues until the outer loop is complete.
+
+i=0
+While i <= 3:
+Lift weights
+i+= 1
+	j=0
+	While j <= 3:
+	Eat some cake as a reward
+	j+= 1
+Else:
+	print('uh-oh')
+
+For every one 'lift', we see 'eat' four times. Stops running at four because it adds 1 to the 3 and asks, "Is the condition met? Nope!"
+J will continously loop 4 times for every ONE i loop until the condition in i is no longer met. 
+
+
+

@@ -1,0 +1,125 @@
+FUNCTIONS
+
+A block of defined, organized code, that is reusable, and performs a specific task.
+Function benefits:
+Code becomes:
+Reusable
+Modular ← what’s this mean?
+Can we  name some functions we currently use? Not methods
+
+Examples of functions
+Print()
+len()
+abs()
+min()
+max()
+Etc.
+
+We can make our own functions too!
+A few tips before we start:
+1. Only write functions for reusable portions of code
+2. A function should serve 1 purpose
+3. Keep them as simple as possible
+4. * Consider if you need to return output
+* Ignore until later
+
+Build a Function
+Ex.
+def functionname( argument):
+‘Im doing stuff’
+return something
+● Def stands for defining a function
+● The function name is all lowercase!
+● Argument is what we want to pass into the function. It’s a required argument
+● *You don’t have to return something
+
+def  addtwo ( myNum):
+	myNum += 2
+	return myNum
+Here we define function addtwo, and pass it 1 argument, myNum
+Inside we modify myNum, then return it
+
+Function with No Return
+def  noreturnnum (myNum):
+myNum += 2
+print(myNum)
+return
+Notice we returned nothing
+What does that mean for us?
+What does this function do if it doesn’t return anything?
+
+Scoping Rules
+Variables declared within a function, only live within that function
+def mystats ( name, age):
+title = ‘Mr.’
+Print( ‘My name is’ ,title, name , ‘in a year, i’ll be” , (int(age)+1))
+return
+title only exists within the scope of the mystats function, it cannot be called outside of it. This is 
+called local scope.
+So can we use the variable name ‘title’ outside the function? Called global scope
+
+Functions with Multiple Arguments
+Functions can have multiple arguments passed in:
+def mystats ( name, age):
+Print( ‘My name is’ , name , ‘in a year, i’ll be” , (int(age)+1))
+return
+Note* By default, arguments are positional!
+ 
+Speaking of Default...
+
+Default Arguments
+An argument is defaultly set to this if nothing is passed:
+def mystats ( name , age = 29):
+Print( ‘My name is’ , name , ‘in a year, i’ll be” , (int(age)+1))
+return
+In the above case, if an age is not passed when we call the function, it will auto assign age to 29
+This is known as a default argument
+
+Variable Length Arguments
+Sometimes you may not know how many args to expect,
+In that case we do the following:
+def funmulti (arg1, *myList): ← I may not know the list size, right?
+print(arg1)
+for i in myList:
+print(i)
+return
+Notice the *, it means this arg is of variable size, figure out how large it is, when it’s passed in
+
+Function Calls
+So we know a few ways to write a function,
+How do we call one?
+functionname (argument(s) to be passed)
+That’s it!
+
+Example
+def mystats ( name, age):
+	Print( ‘My name is’ , name , ‘in a year, i’ll be” , (int(age)+1))
+	return
+To call it:
+mystats(‘Nikkoli’, 29)
+This would print the statement
+However, this is using positional args
+
+Keyword Arguments (Non Positional)
+def mystats ( name, age):
+	Print( ‘My name is’ , name , ‘in a year, i’ll be” , (int(age)+1))
+	return
+Currently if I said:
+mystats(29, ‘Nikkoli’), this is wrong. The function is expecting a name first, then an age
+If I want to ignore this, I can do:
+mystats(age = 29, name = ‘Nikkoli’), this tells the function upfront, what should be assigned to 
+what
+
+When People Get Confused...
+def mystats ( name, age):
+	Print( ‘My name is’ , name , ‘in a year, i’ll be” , (int(age)+1))
+	return
+I could have the following:
+n = input()
+a = input()
+mystats(n , a)
+I can pipe variables to a function, notice their names do not match the functions, they do not 
+have to, but they can)
+
+
+

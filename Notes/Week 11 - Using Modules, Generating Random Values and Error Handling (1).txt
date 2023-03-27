@@ -1,0 +1,173 @@
+Using Modules, Generating Random Values & Error Handling
+
+A Module
+An external script or library that a programmer may import into another script to gain access to 
+functions, methods, and variables found within the external script or library.
+Ex. #Lab Numerics 
+import Math
+math.plt()   ← Here I am stating that I want to use the plt() function found inside the external 
+Math module. In the Numerics lab, I have not programmed a plt() but I’m making use of one.  By 
+typing Math. , I am signifying that I want ‘something’ from inside the Math module. 
+We also say import Math to access the Math library.
+However, that loads all of the Math module
+
+A Fraction of a Module
+Suppose I only want a portion of the Math module, then:
+from Math import plt as plot
+Now I have only grabbed the plt. Notice the as plot part?
+That’s so in my script I can now write: plot() instead of plt() 
+Kinda like saying: plot = plt()
+
+
+Random - To Use
+To use randomization, it’s easiest to import the Random module
+import Random
+Or
+from random import functionName
+
+Random - To Use Cont.
+First we set a seed:
+random.seed(a=None,version =2) 
+a refers to a specific start. If a is set as an specific number, the seed will always generate the 
+same values. Think of it as you passing a variable into a function, if the variable never changes, 
+then the output should never change.  
+If random.seed() is empty, system time (computer’s internal clock) is used to generate  the 
+random value. 
+
+Random - To Generate
+There are many ways to generate a random value. Here are some:
+random() random float between 0 and 1
+uniform(start,end) random float between start and end
+randrange(#) Random integer between 0 and #
+choice([ele1,ele2,ele3]) One random ele from a collection
+shuffle([ele1,ele2,ele3]) Shuffle a list
+sample([ele1,ele2,ele3], k=#) Select # random samples from the collection 
+randint(start, end) random int from start to end
+
+Random All Together Now
+Import random
+random.seed(2)
+print(random.randint(0,5))   
+This will produce the same random value every time on your computer. Why?
+
+Random All Together Now Another way:
+Import random
+print(random.randint(0,5))   
+This will produce an unpredictable random value every time on your computer. Why?
+
+Random All Together Now Another way:
+Import random
+print(random.randint(0,5))   
+
+Error Handling/ Exception Handling
+If I say:
+X = 9
+print(X/0)
+Will this work? NO
+
+Error Handling/ Exception Handling
+Often as programmers we are faced with handling bad input
+And as time has progressed, tools have been developed to handle such problems
+In the case of Python, this is known as a Try/Except Statement
+The idea being, I try to do something, and if that fails, apply an exception
+This should remind you of if and else
+
+Error Handling/ Exception Handling
+States = [‘VA’, ’NJ’]
+try:
+   print(states[1])   #Works
+   print(states[2]) #Will fail, and error
+except:
+   print(‘An error occurred’)
+What prints?
+
+Error Handling/ Exception Handling
+States = [‘VA’, ’NJ’]
+NJ
+An error occurred
+Notice The first statement got through, but not the second. This is because it ‘tries’ to perform 
+as much as it can, and anything that fails is omitted, and the exception code replaces it.
+
+I can have Multiple Exceptions
+try:
+    # statement(s)
+except IndexError:
+    # statement(s)
+except ValueError:
+    # statement(s)
+Note: One one exception will be executed 
+
+Multiple Exceptions
+def fun(a):
+    if a < 4:
+        # throws ZeroDivisionError for a = 3
+        b = a/(a-3)
+    # throws NameError if a >= 4
+    print("Value of b = ", b)
+try:
+    fun(3)
+    fun(5)
+# note that braces () are necessary here for
+# multiple exceptions
+except ZeroDivisionError:
+    print("ZeroDivisionError Occurred and Handled")
+except NameError:
+    print("NameError Occurred and Handled")
+
+Else Joins the Battle!
+Else statements can be used with exception handling:
+def AbyB(a , b):
+    try:
+        c = ((a+b) / (a-b))
+    except ZeroDivisionError:
+        print ("a/b result in 0")
+    else:
+        print (c)
+ 
+# Driver program to test above function
+AbyB(2.0, 3.0)
+AbyB(3.0, 3.0)
+
+-5.0  first result
+a/b result in 0     second result
+Else Clause only fires if Try clause is successful
+
+Finally
+There’s a thing in exception handling called. Finally:
+Finally is code that will be always executed, even if the try 
+fails
+And it can be used in addition to else
+try:
+   stuff
+except:
+ Other stuff
+else:
+   More stuff if try succeeds
+finally:
+   Stuff that will always occur.
+
+Error Raising
+Errors you see in the terminal are raised errors, and you can make your own!
+try:
+    raise NameError("Hi there")  # Raise Error
+except NameError:
+    print ("An exception")
+    raise  # To determine whether the exception was raised or not
+The terminal will print An exception, like regular exception handling does. However, the raise part . will 
+print something like:   Traceback (most recent call last):
+  File "/home/d6ec14ca595b97bff8d8034bbf212a9f.py", line 5, in <module>
+    raise NameError("Hi there")  # Raise Error
+NameError: Hi there
+
+
+
+
+
+
+
+
+
+
+
+
+
